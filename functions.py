@@ -238,7 +238,7 @@ def tweets_stock(company_name = 'Tesla',
     twitter_filter = filter_df(twitter,date_from,date_to)
     
     if close:
-        ax.plot(alpha_filter['Time'],alpha[companies_dict[company_name]+'_close'],color="red")
+        ax.plot(alpha_filter['Time'],alpha_filter[companies_dict[company_name]+'_close'],color="red")
         ax.set_xlabel("Time", fontsize = 14)
         ax.set_ylabel(company_name+" close", color="red",fontsize=14)
 
@@ -248,7 +248,7 @@ def tweets_stock(company_name = 'Tesla',
         plt.title('Liczba tweetów nt. firmy '+company_name+' a jej kursy zamknięcia w interwałach 5min')
         plt.show()
     else:
-        ax.plot(alpha_filter['Time'],alpha[companies_dict[company_name]+'_open'],color="red")
+        ax.plot(alpha_filter['Time'],alpha_filter[companies_dict[company_name]+'_open'],color="red")
         ax.set_xlabel("Time", fontsize = 14)
         ax.set_ylabel(company_name+" open", color="red",fontsize=14)
 
